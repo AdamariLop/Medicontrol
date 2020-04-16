@@ -27,7 +27,7 @@ class Primera extends Component {
           style = {styles.activityIndicator}/>
       </Content>
     </Container>
-    ); //END RETURN
+    ); //END RETURN 
   } //END RENDER
 }; //END CLASS*
 
