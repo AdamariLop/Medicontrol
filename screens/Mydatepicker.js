@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#000',
         marginTop: 30,
-        marginVertical: 20
+        marginVertical: 20,
+        alignItems: 'center'
     }
 });

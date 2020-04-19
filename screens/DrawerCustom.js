@@ -13,18 +13,20 @@ export function DrawerCustom(props) {
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#4682b4" }}>
-                        <Icon active name="bluetooth" type="FontAwesome"/>
+                        <Icon active name="bluetooth" type="FontAwesome" 
+                        onPress={() => {props.navigation.navigate('Accionador')}}/>
                     </Button>
                 </Left>
                 <Body>
                     <Text style={styles.textCenter} 
-                    onPress={() => {props.navigation.navigate('Accionador')}}>Conexión Bluetooth</Text>
+                    onPress={() => {props.navigation.navigate('Accionador')}} >Conexión Bluetooth</Text>
                 </Body>
             </ListItem>
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#9932cc" }}>
-                        <Icon active name="calendar-clock" type="MaterialCommunityIcons"/>
+                        <Icon active name="calendar-clock" type="MaterialCommunityIcons"
+                        onPress={() => {props.navigation.navigate('Mydatepicker')}}/>
                     </Button>
                 </Left>
                 <Body>
@@ -35,7 +37,8 @@ export function DrawerCustom(props) {
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#e9967a" }}>
-                        <Icon active name="page" type="Foundation"/>
+                        <Icon active name="page" type="Foundation"
+                        onPress={() => {props.navigation.navigate('Recetas')}}/>
                     </Button>
                 </Left>
                 <Body>
@@ -46,7 +49,8 @@ export function DrawerCustom(props) {
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#c71585" }}>
-                        <Icon active name='user-circle-o' type='FontAwesome' />
+                        <Icon active name='user-circle-o' type='FontAwesome' 
+                        onPress={() => {props.navigation.navigate('Perfil')}}/>
                     </Button>
                 </Left>
                 <Body>
@@ -57,7 +61,8 @@ export function DrawerCustom(props) {
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#4b0082" }}>
-                        <Icon active name='pill' type='MaterialCommunityIcons' />
+                        <Icon active name='pill' type='MaterialCommunityIcons' 
+                        onPress={() => {props.navigation.navigate('Medicamentos')}}/>
                     </Button>
                 </Left>
                 <Body>
@@ -68,7 +73,8 @@ export function DrawerCustom(props) {
             <ListItem icon>
                 <Left>
                     <Button style={{ backgroundColor: "#87cefa" }}>
-                        <Icon active name='help-with-circle' type='Entypo' />
+                        <Icon active name='help-with-circle' type='Entypo'
+                        onPress={() => {props.navigation.navigate('Ayuda')}}/>
                     </Button>
                 </Left>
                 <Body>

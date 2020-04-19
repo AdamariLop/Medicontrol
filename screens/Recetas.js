@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Left, Icon, Body, Right, View, Container, Text } from 'native-base';
 import { Image, StyleSheet } from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
 import { DrawerActions } from '@react-navigation/native';
 
 export default class Recetas extends Component {
@@ -20,11 +19,7 @@ export default class Recetas extends Component {
                             style={{ width: 225, height: 50, marginTop: 10 }} />
                     </Body>
                     <Right>
-                        <TouchableHighlight onPress={() => { }} >
-                            <View style={{ marginLeft: '10%' }}>
-                                <Icon name='user-circle-o' type='FontAwesome' />
-                            </View>
-                        </TouchableHighlight>
+                        <Icon name='user-circle-o' type='FontAwesome' onPress={() => navegar.navigate('Perfil')} />
                     </Right>
                 </Header>
                 <View>
@@ -32,8 +27,36 @@ export default class Recetas extends Component {
                     <Text style={styles.texto}>Ada</Text>
                 </View>
                 <View>
-                    <Text style={styles.titulo} >EDAD</Text>
-                    <Text style={styles.texto}>20</Text>
+                    <Left style={{ marginRight: 270 }}>
+                        <Text style={styles.titulo} >EDAD</Text>
+                        <Text style={styles.texto}>20</Text>
+                    </Left>
+                    <Right style={{ marginLeft: 220 }}>
+                        <Text style={styles.titulo2} >SEXO</Text>
+                        <Text style={styles.texto2}>F</Text>
+                    </Right>
+                </View>
+                <View style={{marginTop: 100 }}>
+                    <Text style={styles.titulo} >ALERGÍAS</Text>
+                    <Text style={styles.texto}>Ninguna</Text>
+                </View>
+                <View>
+                    <Left style={{ marginRight: 210 }}>
+                        <Text style={styles.titulo} >ESTATURA</Text>
+                        <Text style={styles.texto}>165</Text>
+                    </Left>
+                    <Right style={{ marginLeft: 220 }}>
+                        <Text style={styles.titulo2} >PESO</Text>
+                        <Text style={styles.texto2}>58</Text>
+                    </Right>
+                </View>
+                <View style={{ flex: 1, marginTop: 100 }}>
+                    <Text style={styles.titulo} >IMC</Text>
+                    <Text style={styles.texto}>24</Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.titulo} >DIAGNÓSTICO MÉDICO</Text>
+                    <Text style={styles.texto}>Dolor de cabeza</Text>
                 </View>
             </Container>
         );
@@ -46,7 +69,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontFamily: 'sans-serif-condensed',
         fontWeight: 'bold',
-        marginTop: 20,
+        marginTop: 25,
         marginLeft: '5%'
     },
     texto: {
@@ -54,7 +77,22 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: 'monospace',
         fontWeight: 'bold',
-        marginTop: 10,
+        marginTop: 15,
         marginLeft: '5%'
+    },
+    titulo2: {
+        width: '100%', // OCUPAR EL ANCHO DE CARD
+        fontSize: 25,
+        fontFamily: 'sans-serif-condensed',
+        fontWeight: 'bold',
+        marginTop: 25,
+    },
+    texto2: {
+        width: '100%', // OCUPAR EL ANCHO DE CARD
+        fontSize: 15,
+        fontFamily: 'monospace',
+        fontWeight: 'bold',
+        marginTop: 15,
+        marginRight: 50
     }
 });
