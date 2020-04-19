@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Container, Content, View, CardItem, Button, Text } from 'native-base';
-import { StyleSheet, Modal, ActivityIndicator, Image } from 'react-native';
+import { Container, Content } from 'native-base';
+import { StyleSheet, ActivityIndicator, Image } from 'react-native';
 
 class Primera extends Component {
+
+  static navigationOptions = {
+    //To hide the NavigationBar from current Screen
+    header: null
+  };
+
   state = { animating: true }
    
   closeActivityIndicator = () => setTimeout(() => {
